@@ -4,6 +4,14 @@
     <string name="app_name">PhotoDiary</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="botmLogin">Login</string>
+    <string name="botm_login">Login</string>
+    <string name="botm_registar">Registar</string>
+    <string name="lg_usrn">Username</string>
+    <string name="lg_pswd">Password</string>
+    <string name="confirm">Confirm Password</string>
+    <string name="login">Password</string>
+    <string name="lg_usrn_samp">Your username</string>
+    <string name="lg_pswd_samp">Your password</string>
+    <string name="confirm_samp">Reenter the password</string>
 
 </resources>
