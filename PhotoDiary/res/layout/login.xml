@@ -4,35 +4,103 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     
+    <LinearLayout
+        android:id="@+id/linearLayout_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <TextView
+            android:id="@+id/textView_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="1"
+            android:text="@string/lg_usrn"
+            />
+
+        <EditText
+            android:id="@+id/editText_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:inputType="textCapCharacters"
+            android:maxLength="12"
+            android:singleLine="true" 
+            android:text="@string/lg_usrn_samp"/>
+    </LinearLayout>
     
     <LinearLayout
+        android:id="@+id/linearLayout_pswd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_below="@+id/linearLayout_login"
+        >
+
+        <TextView
+            android:id="@+id/textView_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="1"
+            android:text="@string/lg_pswd"
+            />
+
+        <EditText
+            android:id="@+id/editText_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:inputType="numberPassword"
+            android:maxLength="12"
+            android:singleLine="true" 
+            android:text="@string/lg_pswd_samp"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/linearLayout_re_pswd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_below="@+id/linearLayout_pswd"
+        >
+
+        <TextView
+            android:id="@+id/textView_re_pswd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="1"
+            android:text="@string/confirm"
+            />
+
+        <EditText
+            android:id="@+id/editText_re_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:inputType="numberPassword"
+            android:maxLength="12"
+            android:singleLine="true" 
+            android:text="@string/lg_pswd_samp"/>
+    </LinearLayout>
+     <Button
+            android:id="@+id/botm_lg_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left|center_vertical"
-                android:layout_weight="1"
-                android:textColor="@color/white"                    
-                android:text="Macro Name"/>
-
-            <EditText
-                android:id="@+id/setup_macroname"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_weight="1"
-                android:maxLength="12"
-                android:inputType="textCapCharacters"
-                android:singleLine="true"/>                 
-        </LinearLayout>
-   
-      
-        
+            android:onClick="lgLogin"
+            android:layout_below="@+id/linearLayout_re_pswd"
+            android:text="@string/botm_login" />
     
 
 </RelativeLayout>
