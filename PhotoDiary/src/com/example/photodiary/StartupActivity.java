@@ -1,16 +1,28 @@
 package com.example.photodiary;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends Activity {
+public class StartupActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+		setContentView(R.layout.startup);
+		Button btn_lgoin = (Button) findViewById(R.id.botm_login);
+		btn_lgoin.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent goToLogin = new Intent(StartupActivity.this,LoginActivity.class);
+				startActivity(goToLogin);
+			}
+		});
 	}
 
 	@Override

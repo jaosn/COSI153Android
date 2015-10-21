@@ -13,5 +13,8 @@
     <string name="lg_usrn_samp">Your username</string>
     <string name="lg_pswd_samp">Your password</string>
     <string name="confirm_samp">Reenter the password</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_main">MainActivity</string>
 
 </resources>
