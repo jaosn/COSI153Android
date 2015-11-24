@@ -1,0 +1,21 @@
+PhotoDiary Task list 
+
+-access photos from android album: figure out how to access photo's file path, URI, in code 
+
+-extract the date, time, gps location, altitude from exif data. 
+exif Interface: 
+http://developer.android.com/reference/android/media/ExifInterface.html
+
+
+-use exif data to plot points, lines in world map: use google maps android api. 
+Remember to add internet permission in android manifest xml 
+
+-determine whether photo taken was within city boundaries. If so, add city to list of places
+
+
+-design user interface to display map, photos in ordered format 
+
+-button to manually update the map stored in the database . 
+
+"Took a new photo or changed your album? update the map! "
+-2 databases: login and exif data/map 
