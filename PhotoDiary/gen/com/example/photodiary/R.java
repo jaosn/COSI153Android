@@ -10,6 +10,16 @@ package com.example.photodiary;
 public final class R {
     public static final class attr {
     }
+    public static final class color {
+        public static final int blue=0x7f040001;
+        public static final int green=0x7f040002;
+        public static final int orange=0x7f040004;
+        public static final int pink=0x7f040007;
+        public static final int purple=0x7f040005;
+        public static final int red=0x7f040000;
+        public static final int white=0x7f040003;
+        public static final int yellow=0x7f040006;
+    }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
 
@@ -18,29 +28,39 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
         public static final int pd_sample=0x7f020001;
+        public static final int startup=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000e;
-        public static final int botm_lg_login=0x7f080006;
-        public static final int botm_lg_registar=0x7f08000b;
-        public static final int botm_login=0x7f08000c;
-        public static final int botm_registar=0x7f08000d;
-        public static final int editText_password=0x7f080005;
-        public static final int editText_re_password=0x7f08000a;
-        public static final int editText_username=0x7f080002;
-        public static final int id_fragment_content=0x7f080007;
-        public static final int linearLayout_login=0x7f080000;
-        public static final int linearLayout_pswd=0x7f080003;
-        public static final int linearLayout_re_pswd=0x7f080008;
-        public static final int textView_login=0x7f080001;
-        public static final int textView_password=0x7f080004;
-        public static final int textView_re_password=0x7f080009;
+        public static final int action_settings=0x7f090017;
+        public static final int btn_login=0x7f090015;
+        public static final int btn_login_cancel=0x7f090008;
+        public static final int btn_login_login=0x7f090007;
+        public static final int btn_register=0x7f090016;
+        public static final int btn_register_cancel=0x7f090014;
+        public static final int btn_register_register=0x7f090013;
+        public static final int editText_login_password=0x7f090005;
+        public static final int editText_login_username=0x7f090002;
+        public static final int editText_register_email=0x7f090011;
+        public static final int editText_register_password=0x7f09000b;
+        public static final int editText_register_re_password=0x7f09000e;
+        public static final int editText_register_username=0x7f09000a;
+        public static final int id_fragment_content=0x7f090009;
+        public static final int linearLayout_email=0x7f09000f;
+        public static final int linearLayout_login=0x7f090000;
+        public static final int linearLayout_pswd=0x7f090003;
+        public static final int linearLayout_re_pswd=0x7f09000c;
+        public static final int textView_email=0x7f090010;
+        public static final int textView_login=0x7f090001;
+        public static final int textView_login_warning=0x7f090006;
+        public static final int textView_password=0x7f090004;
+        public static final int textView_re_password=0x7f09000d;
+        public static final int textView_register_warning=0x7f090012;
     }
     public static final class layout {
         public static final int login=0x7f030000;
@@ -49,26 +69,25 @@ public final class R {
         public static final int startup=0x7f030003;
     }
     public static final class menu {
-        public static final int login=0x7f070000;
-        public static final int main=0x7f070001;
-        public static final int register=0x7f070002;
+        public static final int login=0x7f080000;
+        public static final int main=0x7f080001;
+        public static final int register=0x7f080002;
     }
     public static final class string {
-        public static final int action_settings=0x7f050002;
-        public static final int app_name=0x7f050000;
-        public static final int botm_login=0x7f050003;
-        public static final int botm_registar=0x7f050004;
-        public static final int confirm=0x7f050007;
-        public static final int confirm_samp=0x7f05000b;
-        public static final int hello_world=0x7f050001;
-        public static final int lg_pswd=0x7f050006;
-        public static final int lg_pswd_samp=0x7f05000a;
-        public static final int lg_usrn=0x7f050005;
-        public static final int lg_usrn_samp=0x7f050009;
-        public static final int login=0x7f050008;
-        public static final int title_activity_login=0x7f05000c;
-        public static final int title_activity_main=0x7f05000e;
-        public static final int title_activity_register=0x7f05000d;
+        public static final int action_settings=0x7f060002;
+        public static final int app_name=0x7f060000;
+        public static final int btn_cancel=0x7f060009;
+        public static final int btn_login=0x7f060006;
+        public static final int btn_register=0x7f060007;
+        public static final int btn_reset=0x7f060008;
+        public static final int email=0x7f06000d;
+        public static final int hello_world=0x7f060001;
+        public static final int password=0x7f06000a;
+        public static final int re_password=0x7f06000c;
+        public static final int title_activity_login=0x7f060003;
+        public static final int title_activity_main=0x7f060005;
+        public static final int title_activity_register=0x7f060004;
+        public static final int user_name=0x7f06000b;
     }
     public static final class style {
         /** 
@@ -92,10 +111,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }

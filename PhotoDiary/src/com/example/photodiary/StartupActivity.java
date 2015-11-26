@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class StartupActivity extends Activity {
 
@@ -14,8 +15,9 @@ public class StartupActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.startup);
-		Button btn_lgoin = (Button) findViewById(R.id.botm_login);
-		btn_lgoin.setOnClickListener(new View.OnClickListener() {
+		Button btn_login = (Button) findViewById(R.id.btn_login);
+		Button btn_register = (Button) findViewById(R.id.btn_register);
+		btn_login.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -23,6 +25,15 @@ public class StartupActivity extends Activity {
 				startActivity(goToLogin);
 			}
 		});
+		btn_register.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent goToRegister = new Intent(StartupActivity.this,RegisterActivity.class);
+				startActivity(goToRegister);
+			}
+		});
+		
 	}
 
 	@Override

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/startup"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     
@@ -18,19 +19,19 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|center_vertical"
             android:layout_weight="1"
-            android:text="@string/lg_usrn"
+            android:text="@string/user_name"
             />
 
         <EditText
-            android:id="@+id/editText_username"
+            android:id="@+id/editText_login_username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_weight="1"
-            android:inputType="textCapCharacters"
+            android:inputType="text"
             android:maxLength="12"
             android:singleLine="true" 
-            android:text="@string/lg_usrn_samp"/>
+            />
     </LinearLayout>
     
     <LinearLayout
@@ -49,28 +50,42 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|center_vertical"
             android:layout_weight="1"
-            android:text="@string/lg_pswd"
+            android:text="@string/password"
             />
 
         <EditText
-            android:id="@+id/editText_password"
+            android:id="@+id/editText_login_password"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_weight="1"
-            android:inputType="numberPassword"
+            android:inputType="textPassword"
             android:maxLength="12"
             android:singleLine="true" 
-            android:text="@string/lg_pswd_samp"/>
+            />
     </LinearLayout>
+    <TextView
+            android:id="@+id/textView_login_warning"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout_pswd"
+            android:gravity="center"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            />
     
      <Button
-            android:id="@+id/botm_lg_login"
+            android:id="@+id/btn_login_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="lgLogin"
-            android:layout_below="@+id/linearLayout_pswd"
-            android:text="@string/botm_login" />
+            android:layout_below="@+id/textView_login_warning"
+            android:text="@string/btn_login" />
+     <Button
+            android:id="@+id/btn_login_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_login_login"
+            android:text="@string/btn_cancel" />
     
 
 </RelativeLayout>
