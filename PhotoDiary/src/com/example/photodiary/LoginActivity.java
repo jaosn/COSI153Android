@@ -1,5 +1,7 @@
 package com.example.photodiary;
 
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class LoginActivity extends Activity {
 	DatabaseHelper db = new DatabaseHelper(this);
@@ -32,11 +35,27 @@ public class LoginActivity extends Activity {
 			public void onClick(View v) {
 				EditText et_username = (EditText)findViewById(R.id.editText_login_username);
 				EditText et_password = (EditText)findViewById(R.id.editText_login_password);
-				String uname = et_username.getText().toString();
-				User user = db.readUser(uname);
-				
-				Intent goToMain = new Intent(LoginActivity.this,MainActivity.class);
-				startActivity(goToMain);
+				TextView warning = (TextView)findViewById(R.id.textView_login_warning);
+				String username = et_username.getText().toString();
+				String password = et_password.getText().toString();
+				if (username.length() >= 6){
+					List<String> usernames = db.getAllItems();
+					if (usernames.contains(username)){
+						User user = db.readUser(username);
+						String userPassword = user.getPassword();
+						if (password.equals(userPassword)){
+							Intent goToMain = new Intent(LoginActivity.this,MainActivity.class);
+							startActivity(goToMain);
+						}else{
+							warning.setText("Incorrect password!");
+						}
+					}else{
+						warning.setText("Username does note exists!");
+					}
+					
+				}else{
+					warning.setText("The length of username should be >= 6!");
+				}
 			}
 		});
 	}

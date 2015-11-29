@@ -47,12 +47,7 @@
 
         
     </LinearLayout>
-    <fragment  
-        android:layout_below="@+id/linearLayout_login"  
-        android:id="@+id/id_fragment_content"  
-        android:name="com.zhy.zhy_fragments.ContentFragment"  
-        android:layout_width="fill_parent"  
-        android:layout_height="fill_parent" />  
+   
     
     
 

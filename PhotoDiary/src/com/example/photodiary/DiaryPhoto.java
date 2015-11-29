@@ -20,13 +20,6 @@ public class DiaryPhoto {
 		this.uri =uri;
 	}
 	public DiaryPhoto(){
-		super();
-		this.name = null;
-		this.longitude = null;
-		this.latitude = null;
-		this.time = null;
-		this.userid = -1;
-		this.uri = null;
 	}
 	
 	public void setId(int idInput){

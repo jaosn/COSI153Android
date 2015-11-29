@@ -1,9 +1,13 @@
 package com.example.photodiary;
 
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.BoolRes;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,6 +25,7 @@ public class RegisterActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.register);
+
 		Button btn_register = (Button) findViewById(R.id.btn_register_register);
 		Button btn_cancel = (Button) findViewById(R.id.btn_register_cancel);
 		btn_cancel.setOnClickListener(new View.OnClickListener() {
@@ -47,17 +52,28 @@ public class RegisterActivity extends Activity {
 				String pwd = et_password.getText().toString();
 				String re_pwd = et_re_password.getText().toString();
 				String email = et_email.getText().toString();
-				User user = db.readUser(uname);
-				Toast.makeText(getApplicationContext(), " resuklt",
-						   Toast.LENGTH_LONG).show();
-				/*
-				if (pwd.equals(re_pwd) && user.getUsername().equals("")){
-					Toast.makeText(getApplicationContext(),uname+ "\n" + pwd + "\n"+ re_pwd +"\n"+ email,
-						   Toast.LENGTH_LONG).show();
+				
+				User userToSave = new User(uname,pwd,email);
+				
+				if (pwd.equals(re_pwd)){
+					if (uname.length() >= 6){
+						List<String> usernames = db.getAllItems();
+						if (!usernames.contains(uname)){
+							db.createUser(userToSave);
+							Intent goToStartup = new Intent(RegisterActivity.this,StartupActivity.class);
+							startActivity(goToStartup);
+						}
+						else
+							warning.setText("Username already exists!");
+					}
+					else
+						warning.setText("Lenght of username should be >= 6!");
 				}
-				*/
-				//Intent goToStartup = new Intent(RegisterActivity.this,StartupActivity.class);
-				//startActivity(goToStartup);	
+				else{
+					warning.setText("Please re-enter you password!");
+				}
+				
+				
 			}
 		});
 	}
