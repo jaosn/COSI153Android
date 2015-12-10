@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#9DFFFFFF"
+    android:orientation="vertical" >
+
+    <TextSwitcher
+        android:id="@+id/textSwitcher1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </TextSwitcher>
+
+    <ImageSwitcher
+        android:id="@+id/clusterimagediaog_imageSwitcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+    </ImageSwitcher>
+
+    <TextView
+        android:id="@+id/clusterimagediaog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="18sp" >
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/clusterimagediaog_previous"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_backward" />
+
+        <ImageButton
+            android:id="@+id/clusterimagediaog_close"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_back" />
+
+        <ImageButton
+            android:id="@+id/clusterimagediaog_next"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_forward" />
+    </LinearLayout>
+
+</LinearLayout>
